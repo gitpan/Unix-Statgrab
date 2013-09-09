@@ -20,6 +20,8 @@ use ExtUtils::ParseXS     ();
 
 sub ACTION_configure
 {
+    my $self = shift;
+
     my $autoconf = Config::AutoConf::SG->new();
     $autoconf->check_libstatgrab() or die <<EOD;
 *******************************************
@@ -30,7 +32,14 @@ To obtain it, go to
     http://www.i-scream.org/libstatgrab/
 *******************************************
 EOD
-    # $autoconf->write_config_h();
+
+    $autoconf->check_sizeof_IVUV_fit_stat();
+
+    my $xsfile   = "lib/Unix/Statgrab.xs";
+    my $spec     = $self->_infer_xs_spec($xsfile);
+    my $config_h = File::Spec->catfile( $spec->{src_dir}, 'config.h' );
+    $autoconf->write_config_h($config_h);
+
     return;
 }
 
@@ -74,15 +83,16 @@ sub ACTION_write_constants
     #my $xs_const = File::Spec->catfile(getcwd(), 'const-xs.inc');
 
     # workaround #ifdef around each constant (stupid that it's not documented)
-    open(my $c_fh, ">", $c_const) or die("Cannot open $c_const for writing: $!");
-    foreach my $name (@names) {
-	print $c_fh "#define $name $name\n";
+    open( my $c_fh, ">", $c_const ) or die("Cannot open $c_const for writing: $!");
+    foreach my $name (@names)
+    {
+        print $c_fh "#define $name $name\n";
     }
     ExtUtils::Constant::WriteConstants(
                                         NAME         => 'Unix::Statgrab',
                                         NAMES        => \@names,
                                         DEFAULT_TYPE => 'UV',
-                                        C_FH       => $c_fh,
+                                        C_FH         => $c_fh,
                                         XS_FILE      => $xs_const,
                                       );
     close($c_fh);
