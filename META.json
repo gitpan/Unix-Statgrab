@@ -28,14 +28,14 @@
             "Config::AutoConf" : "0.19",
             "File::Copy" : "0",
             "Module::Build" : "0.4000",
-            "parant" : "0"
+            "parent" : "0"
          }
       }
    },
    "provides" : {
       "Unix::Statgrab" : {
          "file" : "lib/Unix/Statgrab.pm",
-         "version" : "0.100"
+         "version" : "0.101"
       }
    },
    "release_status" : "stable",
@@ -47,5 +47,5 @@
          "url" : "https://github.com/rehsack/Unix-Statgrab"
       }
    },
-   "version" : "0.100"
+   "version" : "0.101"
 }
