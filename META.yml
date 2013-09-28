@@ -14,7 +14,7 @@ configure_requires:
   Module::Build: 0.4000
   parent: 0
 dynamic_config: 1
-generated_by: 'Module::Build version 0.4007, CPAN::Meta::Converter version 2.132140'
+generated_by: 'Module::Build version 0.4007, CPAN::Meta::Converter version 2.132661'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -23,8 +23,8 @@ name: Unix-Statgrab
 provides:
   Unix::Statgrab:
     file: lib/Unix/Statgrab.pm
-    version: 0.101
+    version: 0.102
 resources:
   license: http://dev.perl.org/licenses/
-  repository: https://github.com/rehsack/Unix-Statgrab
-version: 0.101
+  repository: https://github.com/i-scream/Unix-Statgrab
+version: 0.102
