@@ -5,13 +5,13 @@
       "Jens Rehsack <sno@NetBSD.org>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "Module::Build version 0.4007, CPAN::Meta::Converter version 2.132661",
+   "generated_by" : "Module::Build version 0.4205",
    "license" : [
       "perl_5"
    ],
    "meta-spec" : {
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
-      "version" : "2"
+      "version" : 2
    },
    "name" : "Unix-Statgrab",
    "prereqs" : {
@@ -30,12 +30,21 @@
             "Module::Build" : "0.4000",
             "parent" : "0"
          }
+      },
+      "develop" : {
+         "requires" : {
+            "Test::CPAN::Changes" : 0,
+            "Test::CheckManifest" : 0,
+            "Test::Pod" : 0,
+            "Test::Pod::Coverage" : 0,
+            "Test::Pod::Spelling::CommonMistakes" : 0
+         }
       }
    },
    "provides" : {
       "Unix::Statgrab" : {
          "file" : "lib/Unix/Statgrab.pm",
-         "version" : "0.102"
+         "version" : "0.103"
       }
    },
    "release_status" : "stable",
@@ -44,8 +53,9 @@
          "http://dev.perl.org/licenses/"
       ],
       "repository" : {
-         "url" : "https://github.com/i-scream/Unix-Statgrab"
+         "type" : "git",
+         "web" : "https://github.com/i-scream/Unix-Statgrab"
       }
    },
-   "version" : "0.102"
+   "version" : "0.103"
 }
