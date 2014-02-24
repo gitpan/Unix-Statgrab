@@ -23,8 +23,8 @@ name: Unix-Statgrab
 provides:
   Unix::Statgrab:
     file: lib/Unix/Statgrab.pm
-    version: '0.103'
+    version: '0.104'
 resources:
   license: http://dev.perl.org/licenses/
   repository: https://github.com/i-scream/Unix-Statgrab
-version: '0.103'
+version: '0.104'

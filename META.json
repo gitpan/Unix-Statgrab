@@ -44,7 +44,7 @@
    "provides" : {
       "Unix::Statgrab" : {
          "file" : "lib/Unix/Statgrab.pm",
-         "version" : "0.103"
+         "version" : "0.104"
       }
    },
    "release_status" : "stable",
@@ -57,5 +57,5 @@
          "web" : "https://github.com/i-scream/Unix-Statgrab"
       }
    },
-   "version" : "0.103"
+   "version" : "0.104"
 }
