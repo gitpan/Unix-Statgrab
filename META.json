@@ -5,50 +5,69 @@
       "Jens Rehsack <sno@NetBSD.org>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "Module::Build version 0.4205",
+   "generated_by" : "ExtUtils::MakeMaker version 6.98, CPAN::Meta::Converter version 2.142060",
    "license" : [
       "perl_5"
    ],
    "meta-spec" : {
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
-      "version" : 2
+      "version" : "2"
    },
    "name" : "Unix-Statgrab",
+   "no_index" : {
+      "directory" : [
+         "t",
+         "inc"
+      ]
+   },
    "prereqs" : {
       "build" : {
-         "requires" : {
-            "Capture::Tiny" : "0.06",
-            "Config::AutoConf" : "0.19",
-            "ExtUtils::CBuilder" : "0.27",
-            "Module::Build" : "0.4000"
-         }
+         "requires" : {}
       },
       "configure" : {
          "requires" : {
-            "Config::AutoConf" : "0.19",
-            "File::Copy" : "0",
-            "Module::Build" : "0.4000",
+            "Capture::Tiny" : "0.06",
+            "Config::AutoConf" : "0.23",
+            "ExtUtils::CBuilder" : "0.27",
+            "ExtUtils::Constant" : "0",
+            "ExtUtils::MakeMaker" : "0",
+            "File::Basename" : "0",
+            "File::Spec" : "0",
+            "Text::ParseWords" : "0",
             "parent" : "0"
          }
       },
       "develop" : {
          "requires" : {
-            "Test::CPAN::Changes" : 0,
-            "Test::CheckManifest" : 0,
-            "Test::Pod" : 0,
-            "Test::Pod::Coverage" : 0,
-            "Test::Pod::Spelling::CommonMistakes" : 0
+            "Test::CPAN::Changes" : "0",
+            "Test::CheckManifest" : "0",
+            "Test::Pod" : "0",
+            "Test::Pod::Coverage" : "0",
+            "Test::Pod::Spelling::CommonMistakes" : "0"
+         }
+      },
+      "runtime" : {
+         "recommends" : {},
+         "requires" : {
+            "Carp" : "0",
+            "File::Basename" : "0",
+            "File::Path" : "2.00",
+            "File::Spec" : "0",
+            "perl" : "v5.8.1"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Test::More" : "0.9"
          }
       }
    },
-   "provides" : {
-      "Unix::Statgrab" : {
-         "file" : "lib/Unix/Statgrab.pm",
-         "version" : "0.104"
-      }
-   },
-   "release_status" : "stable",
+   "release_status" : "testing",
    "resources" : {
+      "bugtracker" : {
+         "mailto" : "list-moreutils@rt.cpan.org",
+         "web" : "http://rt.cpan.org/Public/Dist/Display.html?Name=List-MoreUtils"
+      },
       "license" : [
          "http://dev.perl.org/licenses/"
       ],
@@ -57,5 +76,5 @@
          "web" : "https://github.com/i-scream/Unix-Statgrab"
       }
    },
-   "version" : "0.104"
+   "version" : "0.105_001"
 }
