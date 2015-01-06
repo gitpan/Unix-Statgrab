@@ -7,7 +7,7 @@ build_requires:
   Test::More: '0.9'
 configure_requires:
   Capture::Tiny: '0.06'
-  Config::AutoConf: '0.23'
+  Config::AutoConf: '0.308'
   ExtUtils::CBuilder: '0.27'
   ExtUtils::Constant: '0'
   ExtUtils::MakeMaker: '0'
@@ -16,7 +16,7 @@ configure_requires:
   Text::ParseWords: '0'
   parent: '0'
 dynamic_config: 1
-generated_by: 'ExtUtils::MakeMaker version 6.98, CPAN::Meta::Converter version 2.142060'
+generated_by: 'ExtUtils::MakeMaker version 7.04, CPAN::Meta::Converter version 2.143240'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -26,15 +26,19 @@ no_index:
   directory:
     - t
     - inc
-recommends: {}
+recommends:
+  Test::LeakTrace: '0'
 requires:
   Carp: '0'
   File::Basename: '0'
   File::Path: '2.00'
   File::Spec: '0'
-  perl: v5.8.1
+  perl: v5.8.3
 resources:
-  bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=List-MoreUtils
+  IRC: irc://irc.freenode.net/#libstatgrab
+  MailingList: "mailto:users@i-scream.org'"
+  bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=Unix-Statgrab
+  homepage: https://metacpan.org/release/Unix-Statgrab
   license: http://dev.perl.org/licenses/
   repository: https://github.com/i-scream/Unix-Statgrab
-version: 0.105_001
+version: '0.106'

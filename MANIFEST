@@ -6,6 +6,7 @@ MANIFEST
 ppport.h
 README.md
 Statgrab.xs
+t/00-load.t
 t/01-methods.t
 t/02-hashlist.t
 t/03-leak.t
